@@ -19,7 +19,7 @@
 
 ---
 
-## 🧑‍💻 About Me
+## About Me
 
 I'm a **Statistics & Data Science master's student at Stanford** with a background in machine learning research and software engineering. My work spans LLM evaluation, reinforcement learning, scientific visualization, and AI systems.
 
