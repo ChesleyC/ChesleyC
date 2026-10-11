@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="240" viewBox="0 0 900 240" role="img" aria-labelledby="title desc">
+  <title id="title">A quiet corner at Stanford — courtyard banner</title>
+  <desc id="desc">Redwood trees sway beside a courtyard, a cardinal-red book rests on a bench, and a leaf slowly falls. The scene becomes evening in dark mode.</desc>
+  <style>
+    :root { --paper:#faf7f0; --ink:#50483d; --muted:#8d8578; --line:#e4ddd0; --sky:#f1e9d9; --stone:#dccbb0; --arch:#b3a38b; --green:#506753; --green-light:#71836a; --ground:#e7e8d8; --path:#ede1cb; --sun:#e8c98a; }
+    @media (prefers-color-scheme:dark) { :root { --paper:#232724; --ink:#e8e0d1; --muted:#b4ad9c; --line:#3f4840; --sky:#303e40; --stone:#7e7563; --arch:#454f4b; --green:#385647; --green-light:#536d54; --ground:#303f32; --path:#514e40; --sun:#efe1b4; } }
+    text { font-family:Georgia,'Times New Roman',serif; }
+    .tree-left { transform-origin:167px 284px; animation:sway 14s ease-in-out infinite alternate; }
+    .tree-right { transform-origin:741px 287px; animation:sway 18s ease-in-out -7s infinite alternate-reverse; }
+    .cloud { animation:drift 30s ease-in-out infinite alternate; }
+    .leaf { animation:fall 24s ease-in-out infinite; }
+    .second-leaf { animation:fall 24s ease-in-out -12s infinite; }
+    @keyframes sway { from { transform:rotate(-.7deg); } to { transform:rotate(.9deg); } }
+    @keyframes drift { from { transform:translateX(-10px); } to { transform:translateX(15px); } }
+    @keyframes fall { 0%,12% { opacity:0; transform:translate(0,0) rotate(0); } 16% { opacity:1; } 35% { transform:translate(24px,48px) rotate(60deg); } 55% { transform:translate(7px,104px) rotate(150deg); } 76% { opacity:1; transform:translate(43px,161px) rotate(235deg); } 86%,100% { opacity:0; transform:translate(43px,161px) rotate(235deg); } }
+    @media (prefers-reduced-motion:reduce) { * { animation:none !important; } .leaf,.second-leaf { opacity:0; } }
+  </style>
+  <defs>
+    <clipPath id="scene"><rect x="0" y="0" width="900" height="240" rx="18"/></clipPath>
+    <g id="redwood">
+      <path d="M-7 0 L-5-157 L5-157 L9 0Z" fill="#8c7053"/>
+      <path d="M0-226 C-15-208-13-194-36-174 L-22-176 C-34-154-40-143-59-127 L-40-130 C-55-105-65-91-81-75 L-50-82 C-68-51-77-36-94-22 Q0 1 94-22 C77-40 66-53 50-82 L81-75 C66-93 55-107 40-130 L59-127 C39-147 31-159 22-176 L36-174 C13-194 15-208 0-226Z" fill="var(--green)"/>
+      <path d="M0-217 L-20-166 L-9-169 L-33-120 L-14-126 L-46-70 L-18-78 L-62-29 Q-29-19 0-20Z" fill="var(--green-light)" opacity=".5"/>
+      <path d="M0-193 V-36 M0-124 L24-104 M0-94 L-30-66 M0-58 L32-34" fill="none" stroke="#a9b391" stroke-opacity=".27" stroke-width="2" stroke-linecap="round"/>
+    </g>
+    <g id="arch"><path d="M0 0 V-33 A17 17 0 0 1 34-33 V0Z" fill="var(--arch)"/></g>
+  </defs>
+  <g clip-path="url(#scene)">
+    <g transform="translate(0 -70)">
+    <rect x="0" y="70" width="900" height="240" fill="var(--sky)"/>
+    <circle cx="672" cy="117" r="20" fill="var(--sun)" opacity=".8"/>
+    <g class="cloud" fill="var(--paper)" opacity=".48">
+      <path d="M304 125 Q315 111 333 116 Q346 98 365 116 Q387 111 398 126Z"/>
+      <path d="M483 107 Q493 96 509 103 Q522 89 536 104 Q551 98 562 109Z"/>
+    </g>
+    <path d="M302 181 V137 H319 V120 H326 V137 H344 V181Z" fill="var(--stone)" opacity=".7"/>
+    <rect x="266" y="190" width="367" height="82" rx="3" fill="var(--stone)"/>
+    <path d="M254 192 L293 174 H610 L649 192Z" fill="#9d6454"/>
+    <path d="M270 194 H629" stroke="#f3e4cc" stroke-width="3" opacity=".65"/>
+    <g transform="translate(284 263)">
+      <use href="#arch"/><use href="#arch" x="49"/><use href="#arch" x="98"/><use href="#arch" x="147"/><use href="#arch" x="196"/><use href="#arch" x="245"/><use href="#arch" x="294"/>
+    </g>
+    <path d="M0 266 Q250 248 450 269 Q650 248 900 266 V310 H0Z" fill="var(--ground)"/>
+    <path d="M429 263 H471 L557 310 H343Z" fill="var(--path)"/>
+    <path d="M0 289 Q145 274 247 287 M638 285 Q750 273 900 288" fill="none" stroke="var(--green-light)" stroke-width="2" opacity=".3"/>
+    <g class="tree-left"><use href="#redwood" transform="translate(167 284) scale(.92)"/></g>
+    <g class="tree-right"><use href="#redwood" transform="translate(741 287) scale(.92)"/></g>
+    <g transform="translate(321 251)">
+      <ellipse cx="24" cy="44" rx="62" ry="4" fill="var(--arch)" opacity=".15"/>
+      <path d="M-23 23 V41 M63 23 V41 M-23 11 V27 M63 11 V27" stroke="var(--ink)" stroke-width="3"/>
+      <rect x="-30" y="7" width="100" height="8" rx="2" fill="#ad8a63"/>
+      <rect x="-30" y="19" width="100" height="7" rx="2" fill="#ad8a63"/>
+      <rect x="-31" y="29" width="102" height="5" rx="2" fill="#bd9b73"/>
+      <path d="M15 20 L44 17 L47 24 L18 27Z" fill="#8c1515"/>
+      <path d="M18 24 L46 21" stroke="#eee3cc" stroke-width="2"/>
+    </g>
+    <g transform="translate(202 112)"><g class="leaf"><path d="M0 0 Q13-8 15 2 Q5 12 0 0Z" fill="#b48c57"/></g></g>
+    <g transform="translate(701 115)"><g class="second-leaf"><path d="M0 0 Q13-8 15 2 Q5 12 0 0Z" fill="#c09664"/></g></g>
+    <path d="M554 284 Q559 272 564 283 M576 287 Q581 275 585 287 M239 283 Q242 275 247 283" fill="none" stroke="var(--green-light)" stroke-width="2" stroke-linecap="round"/>
+    </g>
+  </g>
+  <rect x=".5" y=".5" width="899" height="239" rx="18" fill="none" stroke="var(--line)"/>
+</svg>
